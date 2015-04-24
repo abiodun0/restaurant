@@ -8,22 +8,28 @@
  * Controller of the nodeTokenApp
  */
 angular.module('fastFood')
-  .controller('branchitemCtrl', function ($scope,$stateParams,branches,branchitems) {
-
-    //var testdata = $resource('testData/itemList.json');
+    .controller('branchitemCtrl', function ($scope,$stateParams,$http) {
+      
     console.log($stateParams.id);
-      branches.getBranchData($stateParams.id).then(function(data){
+      $http.get('testData/fastFood.json').success(function(data){
+        for(var i=0; i<data.length; i++){
 
-          $scope.restaurant = data;
-          console.log($scope.restaurant);
-  
-          })
-  	/*branchitems.getFoodList($stateParams.id).then(function(data){
+          if($stateParams.id == data[i].id){
+
+                $scope.testData = data[i];
+          }
+        }
+
+      
+
+      });
+
+    /*branchitems.getFoodList($stateParams.id).then(function(data){
       //console.log("success");
       
-  		$scope.availableFood = data;
-  		console.log($scope.availableFood);
-  			
-  	});*/
+      $scope.availableFood = data;
+      console.log($scope.availableFood);
+        
+    });*/
 
-  });   
+  }); 

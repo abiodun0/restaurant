@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('fastFood', ['ionic','uiGmapgoogle-maps'])
+angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -27,21 +27,25 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps'])
   })
   .state('home.index', {
     url: '/index',
+    cache: false,
     views:
     {
       "index":{
         templateUrl: '/views/index.html',
-        controller: 'branchCtrl'
+        controller: 'branchCtrl',
+
       }
 
     }
   })
   .state('home.profile', {
     url: '/profile',
+    
      views:
     {
       "details":{
-        templateUrl: '/views/profile.html'
+        templateUrl: '/views/profile.html',
+         cache: false,
       }
 
     }
@@ -58,11 +62,13 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps'])
   })
    .state('home.branch', {
     url: '/branch/:id',
+     
      views:
     {
       "index":{
         templateUrl: '/views/branch.html',
-        controller: 'branchitemCtrl'
+        controller: 'branchitemCtrl',
+        cache: false,
       }
 
     }
