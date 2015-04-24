@@ -1,0 +1,33 @@
+[
+  {
+    "id":1,
+    "name":"Mercy's Bar Restaurant",
+    "latitude":6.524379,"longitude":3.379206,
+    "Description":"Just one of the restuarant"
+  },
+   {
+    "id":2,
+    "name":"mathing Bar Restaurant",
+    "latitude":6.523,
+    "longitude":3.379206,
+    "Description":"Just one another of the restuarant"
+  },
+   {
+    "id":3,
+    "name":"Kenny Restaurant",
+    "latitude":6.525,"longitude":3.379206,
+    "Description":"We are Here"
+  },
+   {
+    "id":4,
+    "name":"Moyin OkeRestaurant",
+    "latitude":6.526,"longitude":3.379206,
+    "Description":"One Stop"
+  },
+   {
+    "id":5,
+    "name":"Top Notch",
+    "latitude":6.527,"longitude":3.379206,
+    "Description":"party and relax"
+  }
+]

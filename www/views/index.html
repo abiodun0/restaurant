@@ -1,0 +1,36 @@
+<ion-view>
+<ion-content class="has-header">
+<h1 style="text-align:center; font-size:25px">Mr Bigs Closest To You</h1>
+          	
+<div class="angular-google-map-container">
+		<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+			<ui-gmap-markers models="branches" coords="'self'" idkey="'id'" fit="true" dragging="false">
+			 <ui-gmap-windows show="false">
+                <div ng-non-bindable>
+                <div>
+              <table class="popup">
+                <tbody>
+                  <tr>
+                    <td class="label">Name:</td>
+                    <td class="value">{{name}}</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Description:</td>
+                    <td class="value">{{Description}}</td>
+                  </tr>
+                 <tr>
+                    <td class="label">Visit Page:</td>
+                    <td class="value"><a type="button" href="#/home/branch/{{id}}" class="button-positive">
+  Order From {{name}}
+</a></td>
+                  </tr>
+  
+                </tbody>
+              </table>
+            </div></div>
+            </ui-gmap-windows>
+        </ui-gmap-markers>
+		</ui-gmap-google-map>  
+		</div>
+</ion-content>
+</ion-view>

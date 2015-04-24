@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+.angular-google-map-container { height: 400px; }
+.marker-labels{
+	font-size:12px;
+	font-weight:400;
+	font-family:'Open Sans',sans-serif;
+	text-align:center;
+
+}
