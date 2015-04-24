@@ -38,6 +38,10 @@ angular.module('fastFood')
       console.log($scope.testFood);
 
       });
+      $scope.formData = {}
+      $scope.example = {
+        value: new Date()
+      };
 
     /*branchitems.getFoodList($stateParams.id).then(function(data){
       //console.log("success");

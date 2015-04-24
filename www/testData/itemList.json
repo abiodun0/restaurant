@@ -1,120 +1,120 @@
 [
   {
-    "index": 1,
+    "itemid": "553a53224127173552ef70bf",
     "price": "1,068.28",
     "restuarant_id": 1,
     "package_name": "Peppered Meat"
   },
   {
-    "index": 2,
+    "itemid": "553a53220599df7330db85d4",
     "price": "1,022.17",
     "restuarant_id": 4,
     "package_name": "Rice and Stew"
   },
   {
-    "index": 3,
+    "itemid": "553a5322cda984bcd010251d",
     "price": "1,707.09",
     "restuarant_id": 5,
     "package_name": "Plaintain Beaf"
   },
   {
-    "index": 4,
+   "itemid": "553a5322316a0f18cc8db846",
     "price": "1,904.93",
     "restuarant_id": 4,
     "package_name": "Macaroni"
   },
   {
-    "index": 5,
+   "itemid": "553a5322caf4909a2ae374fc",
     "price": "1,421.13",
     "restuarant_id": 1,
     "package_name": "Pounded Yam and Efo"
   },
   {
-    "index": 6,
+  "itemid": "553a5322554eec2472700ead",
     "price": "1,714.38",
     "restuarant_id": 1,
     "package_name": "peppered rice"
   },
   {
-    "index": 7,
+   "itemid": "553a5322463c236be3adaaa5",
     "price": "1,510.71",
     "restuarant_id": 1,
     "package_name": "Yam and Egg"
   },
   {
-    "index": 8,
+   "itemid": "553a5322c92aa7db8e9a6746",
     "price": "1,600.08",
     "restuarant_id": 2,
     "package_name": "Bread and Egg"
   },
   {
-    "index": 9,
+  "itemid": "553a53226d8480efcedceea3",
     "price": "1,943.33",
     "restuarant_id": 1,
     "package_name": "Salad and Beaf"
   },
   {
-    "index": 10,
+      "itemid": "553a53228c1ff17d86cc9c76",
     "price": "1,497.59",
     "restuarant_id": 3,
     "package_name": "Full package with chicken"
   },
   {
-    "index": 11,
+   "itemid": "553a532200474ed89dc65ce7",
     "price": "1,008.72",
     "restuarant_id": 2,
     "package_name": "Fried Rice and Salad"
   },
   {
-    "index": 12,
+    "itemid": "553a53224abca544cb5710c7",
     "price": "1,265.89",
     "restuarant_id": 5,
     "package_name": "Eba and Semo"
   },
   {
-    "index": 13,
+     "itemid": "553a532235c44d4d3099c371",
     "price": "1,479.52",
     "restuarant_id": 4,
     "package_name": "Yogo Vita"
   },
   {
-    "index": 14,
+   "itemid": "553a53226584f1d93246279a",
     "price": "1,913.33",
     "restuarant_id": 2,
     "package_name": "Macaroni"
   },
   {
-    "index": 15,
+   "itemid": "553a532235f45e43bc0a1ec1",
     "price": "1,092.95",
     "restuarant_id": 5,
     "package_name": "Light Egussi"
   },
   {
-    "index": 16,
+ "itemid": "553a53221f557ffc13925532",
     "price": "1,198.07",
     "restuarant_id": 3,
     "package_name": "Yam and Stew"
   },
   {
-    "index": 17,
+     "itemid": "553a5322538a77aee7aaa6d6",
     "price": "1,326.53",
     "restuarant_id": 2,
     "package_name": "peppered rice"
   },
   {
-    "index": 18,
+   "itemid": "553a53229e5e943da39a6719",
     "price": "1,086.26",
     "restuarant_id": 2,
     "package_name": "Beans and Yam"
   },
   {
-    "index": 19,
+     "itemid": "553a544d17da91b33cdfb41e",
     "price": "1,972.19",
     "restuarant_id": 3,
     "package_name": "Assorted Meat"
   },
   {
-    "index": 20,
+    "itemid": "553a544d317a2f5ef69b9e1c",
     "price": "1,946.15",
     "restuarant_id": 5,
     "package_name": "Suya"
