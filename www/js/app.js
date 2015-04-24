@@ -27,12 +27,11 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
   })
   .state('home.index', {
     url: '/index',
-    cache: false,
     views:
     {
       "index":{
         templateUrl: '/views/index.html',
-        controller: 'branchCtrl',
+        controller: 'branchCtrl'
 
       }
 
@@ -40,12 +39,10 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
   })
   .state('home.profile', {
     url: '/profile',
-    
      views:
     {
       "details":{
-        templateUrl: '/views/profile.html',
-         cache: false,
+        templateUrl: '/views/profile.html'
       }
 
     }
@@ -67,8 +64,7 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
     {
       "index":{
         templateUrl: '/views/branch.html',
-        controller: 'branchitemCtrl',
-        cache: false,
+        controller: 'branchitemCtrl'
       }
 
     }

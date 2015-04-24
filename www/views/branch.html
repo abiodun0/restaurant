@@ -1,7 +1,29 @@
-<ion-view cache-view="false">
+<ion-view>
 <ion-content class="has-header">
 
-<h1>{{testData.name}} {{testFood}}</h1>
+<h1 style="text-align:center; font-size:20px">{{testData.name}} Available Orders</h1>
+
+<ul class="list" ng-repeat ="item in testFood">
+<div class="row">
+<div class="col">
+  <li class="item item-checkbox">
+     <label class="checkbox">
+  <input type="checkbox" ng-true-value="'item.price'" ng-false-value="0">
+     </label>
+     {{item.package_name}} 
+  </li>
+</div>
+<div class="col">
+<li class="item item-checkbox">
+  {{item.price}}</li>
+</div>
+<div class="col col-20">
+  <label class="item item-input">
+    <input type="number" value="0"  min="0" step="1">
+  </label>
+</div>
+</div>
+</ul>
 </ion-content>
 
 
