@@ -40,7 +40,7 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps'])
     url: '/profile',
      views:
     {
-      "index":{
+      "details":{
         templateUrl: '/views/profile.html'
       }
 
@@ -50,7 +50,7 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps'])
     url: '/history',
      views:
     {
-      "index":{
+      "order-history":{
         templateUrl: '/views/history.html'
       }
 

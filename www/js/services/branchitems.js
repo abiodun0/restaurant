@@ -12,7 +12,7 @@ angular.module('fastFood')
           for (var i = 1; i < data.length; i++){
             //console.log(i);
              //console.log(data[i]);
-              if(id == data[i].restuarant_id)
+              if(id === data[i].restuarant_id)
               {
 
                 restaurantFood.push(data[i]);
