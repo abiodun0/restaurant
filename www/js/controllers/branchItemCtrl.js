@@ -15,6 +15,7 @@ angular.module('fastFood')
       branches.getBranchData($stateParams.id).then(function(data){
 
           $scope.restaurant = data;
+          console.log($scope.restaurant);
   
           })
   	/*branchitems.getFoodList($stateParams.id).then(function(data){
