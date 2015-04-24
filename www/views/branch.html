@@ -1,14 +1,14 @@
 <ion-view>
 <ion-content class="has-header">
 
-<h1 style="text-align:center; font-size:20px">{{testData.name}} Available Orders {{plant}} </h1>
+<h1 style="text-align:center; font-size:20px">{{testData.name}} Available Orders  </h1>
 <form ng-model="formData">
 <ul class="list" ng-repeat ="item in testFood">
 <div class="row">
 <div class="col">
   <li class="item item-checkbox">
      <label class="checkbox">
-  <input type="checkbox" ng-model="item.itemid" ng-true-value="12567" ng-false-value="0">
+  <input type="checkbox" ng-model="item.isSelected" ng-change="value(item.isSelected,item)">
      </label>
      {{item.package_name}} 
   </li>
@@ -24,10 +24,16 @@
 </div>
 </div>
 </ul>
-<input type="datetime-local" id="exampleInput" name="input" ng-model="example.value"
-      placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required />
+<input type="datetime-local" id="exampleInput" name="input" ng-model="getDate.value"
+      placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2017-12-31T00:00:00" required />
 </form>
-{{formData}}
+<div class="row">
+	<div class="col col-50">
+		<p class="total-text">
+			Total : {{ selectedItems | getprice}}
+		</p>
+	</div>
+</div>
 </ion-content>
 
 

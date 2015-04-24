@@ -35,14 +35,25 @@ angular.module('fastFood')
         }
 
       $scope.testFood = foodlist;
-      console.log($scope.testFood);
+      //console.log($scope.testFood);
 
       });
-      $scope.formData = {}
-      $scope.example = {
+      $scope.getDate = {
         value: new Date()
       };
-
+      $scope.selectedItems = [];
+    $scope.value = function (isSelected, item) {
+        if (isSelected == true) {
+            $scope.selectedItems.push(item);
+        } else {
+           // console.log(item.name);
+            angular.forEach($scope.selectedItems, function (itemRmv, $index) {
+                if (itemRmv.itemid == item.itemid) {
+                    $scope.selectedItems.splice($index, 1);
+                }
+            })
+        }
+    }
     /*branchitems.getFoodList($stateParams.id).then(function(data){
       //console.log("success");
       
