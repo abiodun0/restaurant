@@ -23,6 +23,21 @@ angular.module('fastFood')
       
 
       });
+      $http.get('testData/itemList.json').success(function(data){
+        var foodlist = [];
+        for(var i=0; i<data.length; i++){
+
+          if($stateParams.id == data[i].restuarant_id){
+            foodlist.push(data[i]);
+
+                
+          }
+        }
+
+      $scope.testFood = foodlist;
+      console.log($scope.testFood);
+
+      });
 
     /*branchitems.getFoodList($stateParams.id).then(function(data){
       //console.log("success");
