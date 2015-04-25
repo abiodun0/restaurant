@@ -53,7 +53,10 @@ angular.module('fastFood')
                 }
             })
         }
+        console.log($scope.selectedItems);
     }
+
+
     /*branchitems.getFoodList($stateParams.id).then(function(data){
       //console.log("success");
       
