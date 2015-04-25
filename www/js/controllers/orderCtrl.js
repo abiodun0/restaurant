@@ -9,6 +9,8 @@
  */
 angular.module('fastFood')
   .controller('orderCtrl', function ($scope,$http,branches) {
+  	window.localStorage['name'] = $scope.selectedItems;
+  	console.log(window.localStorage['name']);
     console.log($scope.selectedItems); 	
 		$scope.items = $scope.selectedItems;
 		$scope.formData = {};

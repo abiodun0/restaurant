@@ -5,8 +5,8 @@ angular.module('fastFood')
     return function (value, property) {
         var total = 0;
         angular.forEach(value, function (val, index) {
-            total = total + parseInt(val.price)
+            total = total + Number(val.price)
         });
-        return total;
+        return total.toFixed(2);
     }
 });
