@@ -31,12 +31,30 @@
   </label>
 </div>-->
 </div>
+
 </ul>
-<input type="datetime-local" id="exampleInput" name="input" ng-model="getDate.value"
+<div class="row">
+	<div class="col-offset-10 col col-50">
+<div class="list">
+
+  <div class="item item-input-inset input-date">
+    <label class="item-input-wrapper">
+     <input type="datetime-local" id="exampleInput" name="input" ng-model="getDate.value"
       placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2017-12-31T00:00:00" required />
+    </label>
+  </div>
+  </div>
+</div>
+<div class="col col-20">
+	    <button class="button button-small">
+      Place Order
+    </button>
+</div>
+
+</div>
 </form>
 <div class="row">
-	<div class="col col-50">
+	<div class="col-offset-10 col col-50">
 		<p class="total-text">
 			Total : {{ selectedItems | getprice}}
 		</p>
