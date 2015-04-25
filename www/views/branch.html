@@ -3,7 +3,8 @@
 <div class="row header">
 	<div class="col"></div>
 	<div class="col">
-		<h2>{{testData.name}} Available Orders  </h2>
+		<h2>{{testData.name}} </h2>
+		<p style="text-align:center">Available Items With Price(Tick to select)</p>
 
 	</div>
 	<div class="col"></div>
@@ -11,6 +12,16 @@
 
 <form ng-model="formData">
 <ul class="list" ng-repeat ="item in testFood">
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="item.isSelected" ng-change="value(item.isSelected,item)">
+     </label>
+     {{item.package_name}}  &nbsp; &nbsp; <p>N {{item.price}}</p>
+  </li>
+
+</ul>
+<!--<ul class="list" ng-repeat ="item in testFood">
 <div class="row">
 <div class="col-offset-10 col col-50">
   <li class="item item-checkbox">
@@ -29,36 +40,36 @@
   <label class="item item-input">
     <input type="number" value="0"  min="0" step="1">
   </label>
-</div>-->
+</div>
 </div>
 
-</ul>
+</ul>-->
 <div class="row">
-	<div class="col-offset-10 col col-50">
+<div class="col">
 <div class="list">
 
-  <div class="item item-input-inset input-date">
-    <label class="item-input-wrapper">
+   <label class="item item-input item-stacked-label">
+    <span class="input-label">Expected Delivery Date</span>
      <input type="datetime-local" id="exampleInput" name="input" ng-model="getDate.value"
       placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2017-12-31T00:00:00"/>
     </label>
+    
   </div>
   </div>
-</div>
-<div class="col col-20">
-	    <button class="button button-small" ng-click="submit()" type="submit">
-      Place Order
-    </button>
-</div>
-
-</div>
-</form>
-<div class="row">
-	<div class="col-offset-10 col col-50">
+  <div class="col">
+  <div class="col-offset-10 col col-50">
 		<p class="total-text">
 			Total : {{ selectedItems | getprice}}
 		</p>
 	</div>
+  
+  </div>
+ </div>
+</form>
+<div class="row">
+<button class="button button-full button-positive" ng-click="submit()" type="submit">
+      Place Order
+    </button>
 </div>
 </ion-content>
 
