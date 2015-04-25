@@ -22,6 +22,7 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
   $stateProvider
   .state('home', {
     abstract:true,
+    controller:'mainCtrl',
     url: '/home',
     templateUrl: '/views/home.html'
   })
@@ -32,6 +33,18 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
       "index":{
         templateUrl: '/views/index.html',
         controller: 'branchCtrl'
+
+      }
+
+    }
+  })
+  .state('home.order', {
+    url: '/order',
+    views:
+    {
+      "index":{
+        templateUrl: '/views/order.html',
+        controller: 'orderCtrl'
 
       }
 

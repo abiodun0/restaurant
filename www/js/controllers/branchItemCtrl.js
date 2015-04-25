@@ -8,7 +8,7 @@
  * Controller of the nodeTokenApp
  */
 angular.module('fastFood')
-    .controller('branchitemCtrl', function ($scope,$stateParams,$http) {
+    .controller('branchitemCtrl', function ($scope,$stateParams,$http,$state) {
       
     console.log($stateParams.id);
       $http.get('testData/fastFood.json').success(function(data){
@@ -41,7 +41,7 @@ angular.module('fastFood')
       $scope.getDate = {
         value: new Date()
       };
-      $scope.selectedItems = [];
+      
     $scope.value = function (isSelected, item) {
         if (isSelected == true) {
             $scope.selectedItems.push(item);
@@ -55,7 +55,10 @@ angular.module('fastFood')
         }
         console.log($scope.selectedItems);
     }
-
+    $scope.submit = function(){
+      console.log($scope.selectedItems);
+      $state.go("home.order");
+    }
 
     /*branchitems.getFoodList($stateParams.id).then(function(data){
       //console.log("success");
