@@ -38,14 +38,13 @@ angular.module('fastFood')
       //console.log($scope.testFood);
 
       });
-      $scope.getDate = {
-        value: new Date()
-      };
+  
       
 
     $scope.submit = function(){
      
       $state.go("home.order");
+      console.log($scope.getDate.value);
     }
 
     /*branchitems.getFoodList($stateParams.id).then(function(data){

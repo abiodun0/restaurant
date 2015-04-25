@@ -9,7 +9,9 @@
  */
 angular.module('fastFood')
   .controller('mainCtrl', function ($scope,$http,branches) {
-    
+        $scope.getDate = {
+        value: new Date()
+      };
     $scope.selectedItems = [];
         $scope.value = function (isSelected, item) {
         if (isSelected == true) {
