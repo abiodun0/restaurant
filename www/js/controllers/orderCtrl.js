@@ -32,7 +32,10 @@ angular.module('fastFood')
 		$scope.items = $scope.selectedItems;
 		$scope.formData = JSON.parse(window.localStorage['profile'] || '{}');
 $scope.submitinfo = function(){
+
 			window.localStorage['profile'] = JSON.stringify($scope.formData);
 			window.localStorage['transaction'] = JSON.stringify(transaction);
+
+      $state.go("home.payment");
 		}
   });

@@ -54,6 +54,18 @@ config(function($window) {
 
     }
   })
+  .state('home.payment', {
+    url: '/payment',
+    views:
+    {
+      "index":{
+        templateUrl: '/views/payment.html',
+        controller: 'paymentCtrl'
+
+      }
+
+    }
+  })
   .state('home.profile', {
     url: '/profile',
      views:
