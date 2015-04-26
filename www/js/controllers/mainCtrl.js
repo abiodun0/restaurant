@@ -12,7 +12,7 @@ angular.module('fastFood')
         $scope.getDate = {
         value: new Date()
       };
-      $scope.testName ="";
+    $scope.testName ="";
     $scope.selectedItems = [];
         $scope.value = function (isSelected, item) {
         if (isSelected == true) {

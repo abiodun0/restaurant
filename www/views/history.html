@@ -1,5 +1,27 @@
 <ion-view>
 <ion-content class="has-header">
-<h1 style="text-align:center; font-size:25px">History</h1>
+<h1 style="text-align:center; font-size:20px">Transaction History</h1>
+<div class="row">
+	<div class="col">
+		<p><b>Transaction ID</b></p>
+	</div>
+	<div class="col">
+		<p><b>Delivery Date</b></p>
+	</div>
+	<div class="col">
+		<p><b>Total Price</b></p>
+	</div>
+</div>
+<div class="row" ng-repeat="item in history">
+	<div class="col">
+		<p>{{item.transaction_id}}</p>
+	</div>
+	<div class="col">
+		<p>{{item.date}}</p>
+	</div>
+	<div class="col">
+		<p>{{item.items_bought | getprice}}</p>
+	</div>
+</div>
 </ion-content>
 </ion-view>

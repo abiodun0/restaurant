@@ -9,8 +9,7 @@
  * Controller of the nodeTokenApp
  */
 angular.module('fastFood')
-  .controller('historyCtrl', function ($scope,$http,branches) {
-		console.log(window.localStorage['name']);
-		$scope.history = JSON.parse(window.localStorage['name'] || '[]');
+  .controller('historyCtrl', function ($scope,$http) {
+		$scope.history = JSON.parse(window.localStorage['transaction'] || '[]');
 		console.log($scope.history);
   });

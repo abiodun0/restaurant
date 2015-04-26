@@ -21,9 +21,6 @@ angular.module('fastFood')
           }
         }
 
-          $scope.testName = $scope.testData.name;
-                console.log($scope.testName);
-
       });
 
       $http.get('testData/itemList.json').success(function(data){
