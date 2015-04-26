@@ -9,13 +9,12 @@
  */
 angular.module('fastFood')
   .controller('orderCtrl', function ($scope,$http,branches,$filter) {
-
-  	console.log($scope.testName);
+		//console.log($scope.testName);
   	window.localStorage['history'] = JSON.stringify($scope.selectedItems);
   	$scope.total = $filter('getprice')($scope.selectedItems);
-  	console.log($scope.total);
-  	console.log(window.localStorage['history']);
-    console.log($scope.selectedItems); 	
+  	//console.log($scope.total);
+  	//console.log(window.localStorage['history']);
+    //console.log($scope.selectedItems); 	
 		$scope.items = $scope.selectedItems;
 		$scope.formData = JSON.parse(window.localStorage['profile'] || '{}');
 		$scope.submitinfo = function(){

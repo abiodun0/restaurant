@@ -20,7 +20,7 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','angularPayments'])
 config(function($window) {
     $window.Stripe.setPublishableKey('YOUR-KEY-COMES-HERE')
   })*/
-.config(function($stateProvider,$urlRouterProvider) {
+.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider) {
   window.Stripe.setPublishableKey('pk_test_f1FMYOZEMy5GE3PaqxYZqcCC');
   $urlRouterProvider.otherwise('/home/index');
   $stateProvider
@@ -88,4 +88,4 @@ config(function($window) {
 
     }
   })
-});
+}]);
