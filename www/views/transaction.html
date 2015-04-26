@@ -1,0 +1,29 @@
+<ion-view>
+<div class="content has-header header">
+<h1 style="text-align:center; font-size:20px"> Details for Transaction ID: {{currentTrans.transaction_id}}</h1>
+<div class="row">
+	<div class="col">
+		<p><b>item name</b></p>
+	</div>
+	<div class="col">
+		<p><b>item price</b></p>
+	</div>
+</div>
+<div class="row" ng-repeat="item in currentItems">
+	<div class="col">
+		<p><b>{{item.package_name}}</b></p>
+	</div>
+	<div class="col">
+		<p><b>{{item.price}}</b></p>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<p><b>Total</b></p>
+	</div>
+	<div class="col">
+		<p><b>{{currentTrans.total_price}}</b></p>
+	</div>
+</div>
+</div>
+</ion-view>

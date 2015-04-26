@@ -8,7 +8,11 @@
  * Controller of the nodeTokenApp
  */
 angular.module('fastFood')
-  .controller('profileCtrl', function ($scope,$http,branches) {
+  .controller('profileCtrl', function ($scope,$http) {
   	
-		console.log(window.localStorage['profile']);
+		$scope.formData = JSON.parse(window.localStorage['profile'] || '{}');
+		$scope.submitinfo = function(){
+		window.localStorage['profile'] = JSON.stringify($scope.formData);
+		alert("profile updated");
+	}
   });

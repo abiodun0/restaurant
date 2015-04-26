@@ -8,7 +8,7 @@
  * Controller of the nodeTokenApp
  */
 angular.module('fastFood')
-  .controller('orderCtrl', function ($scope,$http,branches,$filter) {
+  .controller('orderCtrl', function ($scope,$http,branches,$filter,$state) {
   	var id = new Date().getTime();
   	//console.log(id);
   	var transaction = JSON.parse(window.localStorage['transaction'] || '[]');
@@ -22,7 +22,7 @@ angular.module('fastFood')
 
   	};
   	transaction.push(currentTransaction);
-  	console.log(transaction);
+  	//console.log(transaction);
 
   	//window.localStorage['history'] = JSON.stringify($scope.selectedItems);
   	

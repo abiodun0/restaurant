@@ -1,5 +1,27 @@
 <ion-view>
 <ion-content class="has-header">
 <h1 style="text-align:center; font-size:25px">Your Details</h1>
+<form ng-model="formData" ng-submit="submitinfo()">
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" placeholder="First Name" ng-model="formData.firstName">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name" ng-model="formData.lastName">
+        </label>
+         <label class="item item-input">
+          <input type="email" placeholder="Email Address" ng-model="formData.email">
+        </label>
+		<label class="item item-input">
+          <input type="tel" placeholder="Phone Number" ng-model="formData.phone">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Delivery Address" ng-model="formData.Address">
+        </label>
+      </div>
+      <div class="padding">
+     <button type="submit" class="button button-block button-positive activated">Update Your Details</button>
+      </div>
+  </form>
 </ion-content>
 </ion-view>

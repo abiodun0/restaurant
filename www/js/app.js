@@ -76,6 +76,17 @@ config(function($window) {
 
     }
   })
+    .state('home.transdetails', {
+    url: '/history/:transId',
+     views:
+    {
+      "order-history":{
+        templateUrl: '/views/transaction.html',
+        controller: 'transCtrl'
+      }
+
+    }
+  })
    .state('home.branch', {
     url: '/branch/:id',
      
