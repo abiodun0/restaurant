@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
+angular.module('fastFood', ['ionic','uiGmapgoogle-maps','angularPayments'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -16,8 +16,12 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
       StatusBar.styleDefault();
     }
   });
-})
+})/*.
+config(function($window) {
+    $window.Stripe.setPublishableKey('YOUR-KEY-COMES-HERE')
+  })*/
 .config(function($stateProvider,$urlRouterProvider) {
+  window.Stripe.setPublishableKey('pk_test_f1FMYOZEMy5GE3PaqxYZqcCC');
   $urlRouterProvider.otherwise('/home/index');
   $stateProvider
   .state('home', {
