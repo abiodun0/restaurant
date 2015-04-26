@@ -15,6 +15,13 @@
 		<p><b>links</b></p>
 	</div>
 </div>
+<div class="row" ng-show="history.length < 1">
+<div class="col-33 col-offset-33">
+		<p>
+			No recent transactions</p>
+
+	</div>
+</div>
 <div class="row" ng-repeat="item in history">
 	<div class="col">
 		<p>{{item.transaction_id}}</p>
@@ -29,6 +36,13 @@
 		<a href="#/home/history/{{item.transaction_id}}"><button type="button"  class="button button-small button-positive">
   View Details
 </button></a>
+	</div>
+</div>
+<div class="row">
+<div class="col-33 col-offset-33" ng-show="history.length > 0">
+		<button type="button" ng-click="clear()" class="button button-small button-assertive">
+Clear History
+</button>
 	</div>
 </div>
 </ion-content>

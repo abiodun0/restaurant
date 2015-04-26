@@ -4,7 +4,7 @@
           	
 <div class="angular-google-map-container">
 		<ui-gmap-google-map center='map.center' zoom='map.zoom'>
-			<ui-gmap-markers models="branches" coords="'self'" idkey="'id'" fit="true" dragging="false">
+			<ui-gmap-markers models="branches" labelContent="{{Description}}" coords="'self'" idkey="'id'" fit="true" dragging="false">
 			 <ui-gmap-windows show="false">
                 <div ng-non-bindable>
                 <div>
