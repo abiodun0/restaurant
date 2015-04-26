@@ -17,12 +17,15 @@ angular.module('fastFood')
           if($stateParams.id == data[i].id){
 
                 $scope.testData = data[i];
+
           }
         }
 
-      
+          $scope.testName = $scope.testData.name;
+                console.log($scope.testName);
 
       });
+
       $http.get('testData/itemList.json').success(function(data){
         var foodlist = [];
         for(var i=0; i<data.length; i++){

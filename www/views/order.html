@@ -3,7 +3,7 @@
 <div class="content has-header header">
 <h2 style="text-align:center"> Enter your Details and confirm your order</h2>
 <div class="row" ng-repeat="item in items">
-<div class="col col-offset-10 col-30">
+<div class="col col-offset-20 col-30">
 	<p>{{item.package_name}}</p>
 </div>
 <div class="col col-offset-10 col-30">
@@ -12,8 +12,8 @@
 
 </div>
 <div class="row">
-<div class="col col-offset-10 col-30">
-	<p>Total Price:</p>
+<div class="col col-offset-20 col-30">
+	<p><b>Total Price:</b></p>
 </div>
 <div class="col col-offset-10 col-30">
 	<p> N {{items | getprice}}</p>
@@ -29,10 +29,10 @@
           <input type="text" placeholder="Last Name" ng-model="formData.lastName">
         </label>
          <label class="item item-input">
-          <input type="text" placeholder="Email Address" ng-model="formData.email">
+          <input type="email" placeholder="Email Address" ng-model="formData.email">
         </label>
 		<label class="item item-input">
-          <input type="text" placeholder="Phone Number" ng-model="formData.confirmEmail">
+          <input type="tel" placeholder="Phone Number" ng-model="formData.phone">
         </label>
         <label class="item item-input">
           <input type="text" placeholder="Delivery Address" ng-model="formData.Address">

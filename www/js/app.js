@@ -55,7 +55,8 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
      views:
     {
       "details":{
-        templateUrl: '/views/profile.html'
+        templateUrl: '/views/profile.html',
+        controller: 'profileCtrl'
       }
 
     }
@@ -65,7 +66,8 @@ angular.module('fastFood', ['ionic','uiGmapgoogle-maps','ngResource'])
      views:
     {
       "order-history":{
-        templateUrl: '/views/history.html'
+        templateUrl: '/views/history.html',
+        controller: 'historyCtrl'
       }
 
     }
