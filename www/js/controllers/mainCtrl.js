@@ -9,7 +9,7 @@
  */
 angular.module('fastFood')
   .controller('mainCtrl', function ($scope,$http,branches) {
-        $scope.getDate = {
+    $scope.getDate = {
         value: new Date()
       };
     $scope.testName ="";

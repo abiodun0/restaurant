@@ -4,16 +4,18 @@ angular.module('fastFood')
   .factory('mailservice', function($http,$q) {
     var differed = $q.defer();
   	
-    function getBranches(user){
-        user.message = "your order has been successfully placed";
-        $http.get('http://golden0.com/mailfastFood.php',user).success(function(data){
+    function sendMail(message){
+      console.log(message);
+        
+        $http.post('http://golden0.com/mail/mailfastFood.php',message).success(function(data){
+          console.log(data)
             differed.resolve(data);
         });
         return differed.promise;
     }
     return {
 
-        getBranches: getBranches
+        sendMail: sendMail
 
     }
   });

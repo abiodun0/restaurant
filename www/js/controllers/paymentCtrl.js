@@ -8,13 +8,17 @@
  * Controller of the nodeTokenApp
  */
 angular.module('fastFood')
-  .controller('paymentCtrl', function ($scope,$http) {
+  .controller('paymentCtrl', function ($scope,$http,$state) {
   	$scope.stripeCallback = function (code, result) {
     if (result.error) {
-        window.alert('it failed! error: ' + result.error.message);
+        window.alert('error please try again');
+        return false;
     } else {
-        window.alert('success! token: ' + result.id);
+        window.alert('Transaction Successfull');
+          $state.go("home.index");
+        
     }
+
 };
 
   });
