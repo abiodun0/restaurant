@@ -9,7 +9,7 @@
  */
 angular.module('fastFood')
   .controller('branchCtrl', function ($scope,$http,branches) {
-
+      $scope.selectedItems = [];
   
 
  navigator.geolocation.getCurrentPosition(function(pos) {
@@ -19,14 +19,13 @@ angular.module('fastFood')
         center: { latitude: pos.coords.latitude, longitude: pos.coords.longitude }, 
         zoom: 10
       };
-      var maxLat = pos.coords.latitude + 0.004000;
-      console.log(maxLat);
-      var minLat = pos.coords.latitude - 0.004000;
-      console.log(minLat);
-      var maxLong = pos.coords.longitude + 0.04000;
-      console.log(maxLong);
-      var minLong = pos.coords.longitude - 0.04000;
-      console.log(minLong);
+      var maxLat = pos.coords.latitude + 0.002000;
+      var minLat = pos.coords.latitude - 0.002000;
+     
+      var maxLong = pos.coords.longitude + 0.02000;
+      
+      var minLong = pos.coords.longitude - 0.02000;
+      
         branches.getBranches().then(function(data){
           var closeBranches = [];
         var i = 0;

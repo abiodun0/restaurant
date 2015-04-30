@@ -8,17 +8,25 @@
  * Controller of the nodeTokenApp
  */
 angular.module('fastFood')
-  .controller('paymentCtrl', function ($scope,$http,$state) {
-  	$scope.stripeCallback = function (code, result) {
-    if (result.error) {
-        window.alert('error please try again');
-        return false;
-    } else {
-        window.alert('Transaction Successfull');
-          $state.go("home.index");
-        
-    }
+  .controller('paymentCtrl', function ($scope,$http,$state,$filter) {
+  	console.log($scope.selectedItems);
+  	var totalCost = $filter('getprice')($scope.selectedItems);
+  	console.log(totalCost);
+  $scope.stripeCallback = function (code, result) {
 
+    if (result.error) {
+        window.alert('it failed! error: ' + result.error.message);
+    } else {
+    	 	var transaction = {
+    	 		token : result.id,
+    	 		total_cost: totalCost
+    	 	}
+        window.alert('success! token: ' + result.id);
+        $http.post('http://golden0.com/stripe/stripe.php',transaction).success(function(data){
+        	window.alert('success: ' + data);
+
+        })
+    }
 };
 
   });

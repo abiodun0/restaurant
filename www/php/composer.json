@@ -1,0 +1,13 @@
+{
+    "name": "golden/php",
+    "description": "lib",
+    "authors": [
+        {
+            "name": "Abiodun",
+            "email": "abiodun.shuaib.m@gmail.com"
+        }
+    ],
+    "require": {
+    	"stripe/stripe-php": "2.1.2"
+    }
+}
