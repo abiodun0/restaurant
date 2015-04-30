@@ -22,7 +22,9 @@ angular.module('fastFood')
         }
 
       });
-
+      $scope.check = function(){
+        console.log($scope.qty);
+      }
       $http.get('testData/itemList.json').success(function(data){
         var foodlist = [];
         for(var i=0; i<data.length; i++){
