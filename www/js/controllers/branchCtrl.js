@@ -17,21 +17,21 @@ angular.module('fastFood')
                 console.log(pos);
         $scope.map = { 
         center: { latitude: pos.coords.latitude, longitude: pos.coords.longitude }, 
-        zoom: 18 
+        zoom: 10
       };
-      var maxLat = pos.coords.latitude + 0.002000;
+      var maxLat = pos.coords.latitude + 0.004000;
       console.log(maxLat);
-      var minLat = pos.coords.latitude - 0.002000;
+      var minLat = pos.coords.latitude - 0.004000;
       console.log(minLat);
-      var maxLong = pos.coords.longitude + 0.002000;
+      var maxLong = pos.coords.longitude + 0.04000;
       console.log(maxLong);
-      var minLong = pos.coords.longitude - 0.002000;
+      var minLong = pos.coords.longitude - 0.04000;
       console.log(minLong);
         branches.getBranches().then(function(data){
           var closeBranches = [];
-        var i = 0
+        var i = 0;
         while(i<data.length){
-          if(data[i].latitude <= maxLat && data[i].latitude >= minLat && data[i].longtitude <= maxLong && data[i].longtitude >= minLong){
+          if(data[i].latitude >= minLat && data[i].latitude <= maxLat && data[i].longitude >= minLong && data[i].longitude <= maxLong){
 
             closeBranches.push(data[i]);
           }
