@@ -17,15 +17,15 @@ angular.module('fastFood')
                 console.log(pos);
         $scope.map = { 
         center: { latitude: pos.coords.latitude, longitude: pos.coords.longitude }, 
-        zoom: 10
+        zoom: 16
       };
-      var maxLat = pos.coords.latitude + 0.002000;
-      var minLat = pos.coords.latitude - 0.002000;
+      var maxLat = pos.coords.latitude + 0.02200;
+      var minLat = pos.coords.latitude - 0.022000;
      
       var maxLong = pos.coords.longitude + 0.02000;
       
       var minLong = pos.coords.longitude - 0.02000;
-      
+      console.log(maxLat,minLat,maxLong,minLong);
         branches.getBranches().then(function(data){
           var closeBranches = [];
         var i = 0;

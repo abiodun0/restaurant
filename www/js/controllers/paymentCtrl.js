@@ -20,10 +20,12 @@ angular.module('fastFood')
     	 	var transaction = {
     	 		token : result.id,
     	 		total_cost: totalCost
-    	 	}
-        window.alert('success! token: ' + result.id);
+    	 	};
+        
         $http.post('http://golden0.com/stripe/stripe.php',transaction).success(function(data){
         	window.alert('success: ' + data);
+        	$scope.selectedItems = [];
+        	$state.go("home.index");
 
         })
     }
